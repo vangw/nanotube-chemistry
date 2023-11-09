@@ -9,7 +9,7 @@ Created on Tue Nov  7 09:33:30 2023
 import numpy as np
 
 # Load the XYZ file into a NumPy array
-xyz_data = np.loadtxt('/home/mw3/mw/spet5177/SWNT_xyz/CNT/CNT_3_3.xyz' , skiprows=2, usecols=(1,2,3))
+xyz_data = np.loadtxt("<path_to_folder>" , skiprows=2, usecols=(1,2,3))
 
 # Extract the coordinates of the first atom
 first_atom_coordinates = xyz_data[0, :]
