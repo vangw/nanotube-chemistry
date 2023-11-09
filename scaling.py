@@ -35,7 +35,7 @@ def write_xyz(filename, atomic_symbols, coordinates):
 
 # Read the XYZ file, need to select correct file to scale
 # Eventually will automate this
-input_xyz_file = "/home/mw3/mw/spet5177/SWNT_xyz/CNT/5_10.xyz"
+input_xyz_file = "<path_to_filename>"
 last_slash_index = input_xyz_file.rfind("/")
 input_file_name = input_xyz_file[last_slash_index + 1:]
 n,m = input_file_name.split("_")
@@ -47,9 +47,9 @@ num_atoms, atomic_symbols, coordinates = read_xyz(input_xyz_file)
 def scale(): 
     scaling_factor =  1 / 0.529177
     if sys.argv[1] == "C":
-        output_xyz_file = "/home/mw3/mw/spet5177/SWNT_xyz/CNT/CNT_{:}_{:}.xyz".format(n, m)
+        output_xyz_file = "<path_to_folder/CNT_{:}_{:}.xyz".format(n, m)
     elif sys.argv[1] == "BN":
-        output_xyz_file = "/home/mw3/mw/spet5177/SWNT_xyz/BNNT/BNNT_{:}_{:}.xyz".format(n, m)
+        output_xyz_file = "<path_to_folder/BNNT/BNNT_{:}_{:}.xyz".format(n, m)
     else:
         print("Please enter C or BN into command line")
     return scaling_factor, output_xyz_file
