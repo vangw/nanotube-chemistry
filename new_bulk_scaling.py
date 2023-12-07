@@ -10,10 +10,10 @@ def main():
     try:
         if sys.argv[1] == "C":
             global path
-            path = "/home/mw3/mw/spet5177/SWNT_xyz/CNT/"
+            path = "path/SWNT_xyz/CNT/"
 
         elif sys.argv[1] == "BN":
-            path = "/home/mw3/mw/spet5177/SWNT_xyz/BNNT/"
+            path = "path/SWNT_xyz/BNNT/"
 
     except IndexError:
         print("Enter command line argument of C or BN")
@@ -70,7 +70,7 @@ def write_xyz(file, coordinates):
 
 def scale(n, m, num_atoms):
     scaling_factor =  1 / 0.529177
-    common_path = "/home/mw3/mw/spet5177/SWNT_xyz/"
+    common_path = "path"
     if sys.argv[1] == "C":
         output_xyz_file = common_path + "CNT/scaled/CNT_{:}_{:}_{:}.xyz".format(n, m, num_atoms)
     elif sys.argv[1] == "BN":
