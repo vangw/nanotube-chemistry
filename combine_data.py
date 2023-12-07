@@ -1,9 +1,9 @@
 import os
 import pandas as pd
 
-output_data_path = "/u/mw/spet5177/data/CNT/armchair"
-input_data_path = "/u/mw/spet5177/SWNT_xyz/CNT/data"
-output_csv_path = "/u/mw/spet5177/output_data.csv"
+output_data_path = "enter path"
+input_data_path = "enter path"
+output_csv_path = "enter path"
 
 # Function to extract potential and kinetic energy from the eng1.out file
 def extract_energy(file_path):
