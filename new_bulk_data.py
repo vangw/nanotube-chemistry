@@ -19,11 +19,11 @@ files = []
 def main():
     try:
         if sys.argv[1] == "C":
-            path = "/home/mw3/mw/spet5177/SWNT_xyz/CNT/"
-            output_path = "/home/mw3/mw/spet5177/SWNT_xyz/CNT/data/"
+            path = "path/SWNT_xyz/CNT/"
+            output_path = "path/SWNT_xyz/CNT/data/"
         elif sys.argv[1] == "BN":
-            path = "/home/mw3/mw/spet5177/SWNT_xyz/BNNT/"
-            output_path = "/home/mw3/mw/spet5177/SWNT_xyz/BNNT/data/"
+            path = "path/SWNT_xyz/BNNT/"
+            output_path = "path/SWNT_xyz/BNNT/data/"
     except IndexError:
         print("Enter command line argument of C or BN")
     
