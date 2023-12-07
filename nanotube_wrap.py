@@ -4,7 +4,7 @@ import mpl_toolkits.mplot3d.axes3d as axes3d
 import matplotlib.colors
 import copy
 
-with open("/home/mw3/mw/spet5177/10x10_ideal/test_A_aux.dat", "r") as aux:
+with open("path to aux file", "r") as aux:
     dim = np.genfromtxt(aux, skip_header =3, max_rows = 1)
 
 n = int(input("Enter the value for n: "))
@@ -13,7 +13,7 @@ m = int(input("Enter the value for m: "))
  
 
 # Open coordinate file and import data to array
-with open("/home/mw3/mw/spet5177/10x10_ideal/test_A_crds.dat", "r") as crds:
+with open("path to crds file", "r") as crds:
     array = np.genfromtxt(crds)
 # Defines the chiral vector based on a1 and a2 vectors
 # This is then used to manipulate x,y coords onto the vector 
@@ -102,7 +102,7 @@ plot_tube()
 
 
 # create file and write it to vmd for visualisation
-with open("/home/mw3/mw/spet5177/10x10_ideal/nanotube_{:}_{:}.xyz".format(n, m), "w") as vmd:
+with open("path/nanotube_{:}_{:}.xyz".format(n, m), "w") as vmd:
     vmd.write("{:}\n\n " .format(tube.shape[0]))
     for i in range(tube.shape[0]):
         vmd.write("C{:} {:<10} {:<10} {:<10}\n" .format(i+1, tube[i,0], tube[i,1], tube[i,2]))
